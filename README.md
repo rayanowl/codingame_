@@ -1,2 +1,2 @@
-# codingamepower
+# codingame
 Codingame Challenges
