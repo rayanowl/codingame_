@@ -1,2 +1,2 @@
 # codingame
-Codingame Challenges
+
