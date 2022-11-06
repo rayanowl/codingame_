@@ -1,34 +1,33 @@
 # Who is the winner?
 
-# C++
+
+import sys
+import math
+
+# Auto-generated code below aims at helping you parse
+# the standard input according to the problem statement.
+
+r = int(input())
+ia, ib, a_1, b_1 = [int(i) for i in input().split()]
+a=ia
+b=ib
+
+for i in range(r):
+    a -= b_1
+    b+= b_1//2
+    if a <= 0:
+        print("B", b)
+        exit()
+
+    b -= a_1
+    a+=a_1//2
+
+    if b <= 0:
+        print("A", a)
+        exit()
 
 
-#include <bits/stdc++.h>
-
-using namespace std;
-
-/**
- * Auto-generated code below aims at helping you parse
- * the standard input according to the problem statement.
- **/
-
-int main()
-{
-    int r;
-    cin >> r; cin.ignore();
-    int a;
-    int b;
-    int a_1;
-    int b_1;
-    cin >> a >> b >> a_1 >> b_1; cin.ignore();
-    while(r--){
-        if(a <= 0 or b<=0) break;
-        b += floor(b_1 / 2);
-        a += floor(a_1 / 2);
-        b -= a_1;
-        a -= b_1;
-    }
-    if(a>b) cout<<"A "<<a;
-    else cout << "B "<<b;
-}
-
+if a > b:
+    print("A", a)
+else:
+    print("B", b)
